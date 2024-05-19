@@ -7,63 +7,51 @@
   DTS:CreatorName="WIN-B7AAI2DSM42\Administrator"
   DTS:DTSID="{F2A6BEB7-C39C-4548-BC69-57D2F83C8537}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{97E65F84-A1D6-48A4-8803-A158E30AD782}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{DE7B4067-A417-4AD5-8D4D-3B541FBA4458}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{AD42580A-B8F6-4D2D-A00D-175B5DD412DC}"
+      DTS:DTSID="{7DB6A5FC-3B6F-404F-80C5-AA34F2DC30BA}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
-          DTS:LocaleID="1033"
+          DTS:LocaleID="1036"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Desktop\Project ETL Data\Call Types.csv">
+          DTS:ConnectionString="C:\Users\HORLAIN NEMKENANG\Documents\DATAWAREHOUSE_PROJET\Call Types.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallTypeID"
-              DTS:DTSID="{E5C22A8A-CAF6-4D98-A98A-F8766210F0A5}"
+              DTS:DTSID="{CC7308A9-6403-4A97-8F31-727AB2EAB302}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallTypeLabel"
-              DTS:DTSID="{8ABD7227-C0A6-416E-B283-61FD9CC4273D}"
+              DTS:DTSID="{85E0045D-9879-45DA-89FE-C6271C2E0035}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{BFE32A38-A7C6-4521-8DF3-1A3E1D5C8239}"
-      DTS:ObjectName="localhost.A_23_ETL_GroupProject_STA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=A_23_ETL_GroupProject_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{BFE32A38-A7C6-4521-8DF3-1A3E1D5C8239}localhost.A_23_ETL_GroupProject_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -88,7 +76,7 @@
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
-              localeId="1033"
+              localeId="1036"
               name="FF_SRC - Call Types"
               usesDispositions="true"
               version="1">
@@ -165,13 +153,13 @@
                       refId="Package\DFT_STA Call Types\FF_SRC - Call Types.Outputs[Flat File Source Output].ExternalColumns[CallTypeID]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="CallTypeID" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Call Types\FF_SRC - Call Types.Outputs[Flat File Source Output].ExternalColumns[CallTypeLabel]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="CallTypeLabel" />
                   </externalMetadataColumns>
                 </output>
@@ -220,7 +208,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[OLE_DST - Call Types]</property>
+                  name="OpenRowset">[OLE_DST - Call Types]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -263,8 +251,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_STA Call Types\OLE_DST - Call Types.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
+                  connectionManagerID="{D17E3191-7085-4938-9D33-A7DFF3523E10}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Localhost.A_23_ETL_GroupProjet_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -277,14 +265,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].Columns[CallTypeID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CallTypeID"
-                      externalMetadataColumnId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeID]"
-                      lineageId="Package\DFT_STA Call Types\FF_SRC - Call Types.Outputs[Flat File Source Output].Columns[CallTypeID]" />
-                    <inputColumn
                       refId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].Columns[CallTypeLabel]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -292,6 +272,14 @@
                       cachedName="CallTypeLabel"
                       externalMetadataColumnId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeLabel]"
                       lineageId="Package\DFT_STA Call Types\FF_SRC - Call Types.Outputs[Flat File Source Output].Columns[CallTypeLabel]" />
+                    <inputColumn
+                      refId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].Columns[CallTypeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CallTypeID"
+                      externalMetadataColumnId="Package\DFT_STA Call Types\OLE_DST - Call Types.Inputs[OLE DB Destination Input].ExternalColumns[CallTypeID]"
+                      lineageId="Package\DFT_STA Call Types\FF_SRC - Call Types.Outputs[Flat File Source Output].Columns[CallTypeID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -346,7 +334,34 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL TRUNCATE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{f7e1e5ba-77ee-416f-9059-fffd94baabba}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL TRUNCATE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D17E3191-7085-4938-9D33-A7DFF3523E10}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[OLE_DST - Call Types]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B74ED4DA-524C-49AF-A5AC-626A04365A6D}"
+      DTS:From="Package\SQL TRUNCATE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_STA Call Types" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -358,11 +373,37 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183,42"
+          Size="183.2,41.6"
           Id="Package\DFT_STA Call Types"
           TopLeft="193,111" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\SQL TRUNCATE"
+          TopLeft="197.999999726812,21.0666679985655" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="280.899999863406,62.6666679985655">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.3333320014345"
+              Start="0,0"
+              End="0,40.8333320014345">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.8333320014345" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -372,27 +413,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183,42"
-          Id="Package\DFT_STA Call Types\FF_SRC - Call Types"
-          TopLeft="179.5,90.5" />
-        <NodeLayout
-          Size="191,42"
+          Size="184,41.6"
           Id="Package\DFT_STA Call Types\OLE_DST - Call Types"
-          TopLeft="171,198" />
+          TopLeft="177.666666302416,217.933333194719" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\DFT_STA Call Types\FF_SRC - Call Types"
+          TopLeft="177.000000136594,49.7666669499212" />
         <EdgeLayout
           Id="Package\DFT_STA Call Types.Paths[Flat File Source Output]"
-          TopLeft="268.75,132.5">
+          TopLeft="269.133333219505,91.3666669499212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.5"
+              EndConnector="0,126.566666244798"
               Start="0,0"
-              End="0,58">
+              End="0,119.066666244798">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58" />
+                    End="0,119.066666244798" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

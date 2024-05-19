@@ -7,81 +7,69 @@
   DTS:CreatorName="WIN-B7AAI2DSM42\Administrator"
   DTS:DTSID="{E2F510FA-787D-4B1B-A89D-128210FABD7B}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="STA_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{A109DDFE-FDB0-4DB1-A0F3-3C914E154872}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{FDFCEA53-3507-4B26-A2E5-77003DEEDE42}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{14289252-79D6-49BD-A107-D943FA7C154F}"
+      DTS:DTSID="{0077956F-FF12-4990-8B05-C276EC26EB9F}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
-          DTS:LocaleID="1033"
+          DTS:LocaleID="1036"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Desktop\Project ETL Data\Employees.csv">
+          DTS:ConnectionString="C:\Users\HORLAIN NEMKENANG\Documents\DATAWAREHOUSE_PROJET\Employees.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{8FC6A06E-CE2F-40E4-AA28-5075DCF13027}"
+              DTS:DTSID="{1C92E210-1892-401D-A7DB-55E5952C1420}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeName"
-              DTS:DTSID="{D7E982AC-E8A2-44B7-BDC5-70B83C2F5B2D}"
+              DTS:DTSID="{D612FD6E-4E21-425A-A4FC-16CBFC8FCF75}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Site"
-              DTS:DTSID="{A13C009D-508F-497E-82BE-F7EFDF029E91}"
+              DTS:DTSID="{EB99E0A0-D80D-43CC-B239-55F95AEE66D5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ManagerName"
-              DTS:DTSID="{72DC7582-2061-4072-85CA-7BB587D077D6}"
+              DTS:DTSID="{B1E13DE6-12F8-437C-A948-C1EEFE49C376}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B996F6BC-C805-433A-8FF3-8FD6AA332051}"
-      DTS:ObjectName="localhost.A_23_ETL_GroupProject_STA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=A_23_ETL_GroupProject_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-STA_Employee-{B996F6BC-C805-433A-8FF3-8FD6AA332051}localhost.A_23_ETL_GroupProject_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -106,7 +94,7 @@
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
-              localeId="1033"
+              localeId="1036"
               name="FF_SRC - Employee"
               usesDispositions="true"
               version="1">
@@ -227,25 +215,25 @@
                       refId="Package\DFT_STA Employee\FF_SRC - Employee.Outputs[Flat File Source Output].ExternalColumns[EmployeeID]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="EmployeeID" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Employee\FF_SRC - Employee.Outputs[Flat File Source Output].ExternalColumns[EmployeeName]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="EmployeeName" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Employee\FF_SRC - Employee.Outputs[Flat File Source Output].ExternalColumns[Site]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Site" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Employee\FF_SRC - Employee.Outputs[Flat File Source Output].ExternalColumns[ManagerName]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="ManagerName" />
                   </externalMetadataColumns>
                 </output>
@@ -294,7 +282,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[OLE_DST - Employee]</property>
+                  name="OpenRowset">[OLE_DST - Employee]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -337,8 +325,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_STA Employee\OLE_DST - Employee.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
+                  connectionManagerID="{D17E3191-7085-4938-9D33-A7DFF3523E10}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Localhost.A_23_ETL_GroupProjet_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -448,7 +436,34 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL TRUNCATE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a864ab1d-9898-427a-8df5-da7ecd921228}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL TRUNCATE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D17E3191-7085-4938-9D33-A7DFF3523E10}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[OLE_DST - Employee]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7842F84E-F33A-409D-94C0-C58A60D57A1C}"
+      DTS:From="Package\SQL TRUNCATE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_STA Employee" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -460,11 +475,37 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="180,42"
+          Size="180,41.6"
           Id="Package\DFT_STA Employee"
           TopLeft="145,156" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\SQL TRUNCATE"
+          TopLeft="149.16666643901,38.3333348580864" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="231.683333219505,79.9333348580864">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.0666651419136"
+              Start="0,0"
+              End="0,68.5666651419136">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5666651419136" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -474,27 +515,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="180,42"
-          Id="Package\DFT_STA Employee\FF_SRC - Employee"
-          TopLeft="174,109" />
-        <NodeLayout
-          Size="188,42"
+          Size="188,41.6"
           Id="Package\DFT_STA Employee\OLE_DST - Employee"
           TopLeft="177,224" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\DFT_STA Employee\FF_SRC - Employee"
+          TopLeft="174,109" />
         <EdgeLayout
           Id="Package\DFT_STA Employee.Paths[Flat File Source Output]"
-          TopLeft="267.5,151">
+          TopLeft="267.5,150.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,73"
+              EndConnector="0,73.4"
               Start="0,0"
-              End="0,65.5">
+              End="0,65.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.5" />
+                    End="0,65.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

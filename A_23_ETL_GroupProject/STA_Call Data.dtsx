@@ -7,100 +7,26 @@
   DTS:CreatorName="WIN-B7AAI2DSM42\Administrator"
   DTS:DTSID="{186DAADE-3AA3-485E-9E6B-6863D9B870B5}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{3398C9C1-94DB-4DC8-A958-6DBA74D948DF}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{66A65786-7778-4EAD-8227-AD1922D0EFDB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{E8E3EEA2-86EB-43C9-A75B-1ABEA454B1D7}"
+      DTS:DTSID="{4588A47F-AB6E-4447-9EAA-A45AFED3B90B}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::FilePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Administrator\Desktop\Project ETL Data\Calls data\Data 2018.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallTimestamp"
-              DTS:DTSID="{CB08BB3A-E2C2-4F2E-89BF-AE1B7B4F46A5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Call Type"
-              DTS:DTSID="{DD958CAA-9408-4E13-B7B9-F50E29521D20}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{40193954-A4C9-4970-A42D-112A01094743}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallDuration"
-              DTS:DTSID="{EA3DC136-1E6B-47FA-8E46-FDF4856409F8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="WaitTime"
-              DTS:DTSID="{CC23BA18-9BC8-43FA-9323-3DCD673DB080}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CallAbandoned"
-              DTS:DTSID="{3781F4F8-A71B-4509-A229-E28F973A3A28}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{F1D47AE5-4AA2-43C4-B1B2-17AE96521BF1}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
+          DTS:LocaleID="1036"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
@@ -115,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallTimestamp"
-              DTS:DTSID="{3DAFC96B-BA72-4931-AEB4-B85808E3547F}"
+              DTS:DTSID="{557AF567-7BAB-4202-BCF7-F6796A7DB7D6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Type"
-              DTS:DTSID="{CF3625AC-1146-4E13-8854-2F12C9C48BFA}"
+              DTS:DTSID="{809CA471-A6F2-468A-AFC1-6064C8403910}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -133,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeID"
-              DTS:DTSID="{1FF71C2F-097C-4936-9316-8550692D7879}"
+              DTS:DTSID="{9980F89B-CC5B-417B-807D-7A6578CAA120}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallDuration"
-              DTS:DTSID="{DC871BA2-67D7-49A0-8BA9-FDD00CA2881D}"
+              DTS:DTSID="{A385D6A4-C72E-45FF-BCD1-4265118BAAFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -151,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="WaitTime"
-              DTS:DTSID="{CBC11FCA-3248-421E-AAC8-D2075AD01B50}"
+              DTS:DTSID="{08A6A7F1-8AAB-467E-8542-ABB27C94BF95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -160,22 +86,10 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CallAbandoned"
-              DTS:DTSID="{F988833D-8316-4A82-BC3B-A8CD21062673}"
+              DTS:DTSID="{74CAF8F7-24E8-46A0-989E-8FD7EC6712FC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{514354D5-4F7F-4C76-98F7-737B0425EAD6}"
-      DTS:ObjectName="localhost.A_23_ETL_GroupProject_STA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=A_23_ETL_GroupProject_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{514354D5-4F7F-4C76-98F7-737B0425EAD6}localhost.A_23_ETL_GroupProject_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -215,7 +129,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\Administrator\Desktop\Project ETL Data\Calls data" />
+              Folder="C:\Users\HORLAIN NEMKENANG\Documents\DATAWAREHOUSE_PROJET\Calls data" />
             <FEFEProperty
               FileSpec="*.CSV" />
             <FEFEProperty
@@ -275,7 +189,7 @@
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
-                  localeId="1033"
+                  localeId="1036"
                   name="FF_SRC - Call Data"
                   usesDispositions="true"
                   version="1">
@@ -292,8 +206,8 @@
                   <connections>
                     <connection
                       refId="Package\FLC - STA Call Data\DFT_STA Call Data\FF_SRC - Call Data.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
@@ -562,8 +476,8 @@
                   <connections>
                     <connection
                       refId="Package\FLC - STA Call Data\DFT_STA Call Data\OLE_DST - Call Data.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
+                      connectionManagerID="{D17E3191-7085-4938-9D33-A7DFF3523E10}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Localhost.A_23_ETL_GroupProjet_STA]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -721,7 +635,7 @@
             DTS:Name="SqlStatementSource">"insert into FileInfo values ('"+ @[User::FilePath]  +"',"+ (DT_WSTR,12) @[User::Cnt] +",GETDATE())"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{514354D5-4F7F-4C76-98F7-737B0425EAD6}"
+              SQLTask:Connection="{D17E3191-7085-4938-9D33-A7DFF3523E10}"
               SQLTask:SqlStatementSource="insert into FileInfo values ('C:\Users\Administrator\Desktop\Project ETL Data\Calls data\Data 2018.csv',0,GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -739,13 +653,40 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{981D648A-4D6A-4142-B359-90FBC36011E9}"
-          DTS:ObjectName="{981D648A-4D6A-4142-B359-90FBC36011E9}"
+          DTS:DTSID="{68D5B144-BDED-4023-A19B-B7F6E1D12463}"
+          DTS:ObjectName="{68D5B144-BDED-4023-A19B-B7F6E1D12463}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FilePath" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL TRUNCATE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{379fb167-5b56-4bcd-9138-3a208a05fe1f}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL TRUNCATE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D17E3191-7085-4938-9D33-A7DFF3523E10}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[OLE_DST - Call Data]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0CC2648C-F057-4838-BA3D-76C87151398B}"
+      DTS:From="Package\SQL TRUNCATE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\FLC - STA Call Data" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -757,11 +698,15 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
+          Size="176,41.6"
           Id="Package\FLC - STA Call Data\DFT_STA Call Data"
           TopLeft="10.5,11.5" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\FLC - STA Call Data\SQL - Logs"
+          TopLeft="30,91" />
         <EdgeLayout
           Id="Package\FLC - STA Call Data.PrecedenceConstraints[Constraint]"
           TopLeft="97.75,53.5">
@@ -784,17 +729,51 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="134,42"
-          Id="Package\FLC - STA Call Data\SQL - Logs"
-          TopLeft="30,91" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205,188"
-          Size="205,231"
+          PanelSize="204.8,188"
+          Size="204.8,231.2"
           Id="Package\FLC - STA Call Data"
-          TopLeft="185,44" />
+          TopLeft="195.833332741426,154.999999367197" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\SQL TRUNCATE"
+          TopLeft="234.166663980319,48.7333352196878" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="313.366663980319,90.3333352196879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.1333312388925,64.6666641475095"
+              Start="0,0"
+              End="-15.1333312388925,57.1666641475095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.3333320737548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.3333320737548"
+                    Point2="0,32.3333320737548"
+                    Point3="-4,32.3333320737548" />
+                  <mssgle:LineSegment
+                    End="-11.1333312388925,32.3333320737548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.1333312388925,32.3333320737548"
+                    Point2="-15.1333312388925,32.3333320737548"
+                    Point3="-15.1333312388925,36.3333320737548" />
+                  <mssgle:LineSegment
+                    End="-15.1333312388925,57.1666641475095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -804,27 +783,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
+          Size="176,41.6"
           Id="Package\FLC - STA Call Data\DFT_STA Call Data\FF_SRC - Call Data"
-          TopLeft="174.5,50.5" />
+          TopLeft="170.33333356099,18.4333335563209" />
         <NodeLayout
-          Size="160,42"
+          Size="184,41.6"
+          Id="Package\FLC - STA Call Data\DFT_STA Call Data\OLE_DST - Call Data"
+          TopLeft="170.5,251.5" />
+        <NodeLayout
+          Size="160,41.6"
           Id="Package\FLC - STA Call Data\DFT_STA Call Data\CNT- Count files"
-          TopLeft="185.5,163.5" />
+          TopLeft="187.166666575604,140.966666823361" />
         <EdgeLayout
-          Id="Package\FLC - STA Call Data\DFT_STA Call Data.Paths[Flat File Source Output]"
-          TopLeft="264,92.5">
+          Id="Package\FLC - STA Call Data\DFT_STA Call Data.Paths[Row Count Output 1]"
+          TopLeft="264.833333287802,182.566666823361">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71"
+              EndConnector="0,68.9333331766394"
               Start="0,0"
-              End="0,63.5">
+              End="0,61.4333331766394">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.5" />
+                    End="0,61.4333331766394" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -833,24 +816,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="184,42"
-          Id="Package\FLC - STA Call Data\DFT_STA Call Data\OLE_DST - Call Data"
-          TopLeft="170.5,251.5" />
         <EdgeLayout
-          Id="Package\FLC - STA Call Data\DFT_STA Call Data.Paths[Row Count Output 1]"
-          TopLeft="264,205.5">
+          Id="Package\FLC - STA Call Data\DFT_STA Call Data.Paths[Flat File Source Output]"
+          TopLeft="258.33333356099,60.0333335563209">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="8.83333301461391,80.9333332670397"
               Start="0,0"
-              End="0,38.5">
+              End="8.83333301461391,73.4333332670397">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,36.4666666335199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.4666666335199"
+                    Point2="0,40.4666666335199"
+                    Point3="4,40.4666666335199" />
+                  <mssgle:LineSegment
+                    End="4.83333301461391,40.4666666335199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.83333301461391,40.4666666335199"
+                    Point2="8.83333301461391,40.4666666335199"
+                    Point3="8.83333301461391,44.4666666335199" />
+                  <mssgle:LineSegment
+                    End="8.83333301461391,73.4333332670397" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
