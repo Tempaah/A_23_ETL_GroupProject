@@ -7,90 +7,78 @@
   DTS:CreatorName="WIN-B7AAI2DSM42\Administrator"
   DTS:DTSID="{80DA9829-AF55-4E19-BE41-88BB03F03BF0}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{4A77062E-8364-458A-917B-F1FF69DB7C9B}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{DB96A31B-DB6F-4365-94B2-7D6059650443}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{BE591408-7CC4-45E9-90C7-D1FFADA3B0C4}"
+      DTS:DTSID="{FC098C24-E6E4-4584-8909-9826D198A8C6}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
-          DTS:LocaleID="1033"
+          DTS:LocaleID="1036"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\Desktop\Project ETL Data\Call Charges.csv">
+          DTS:ConnectionString="C:\Users\HORLAIN NEMKENANG\Documents\DATAWAREHOUSE_PROJET\Call Charges.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Type "
-              DTS:DTSID="{F7CB14F2-8FED-4EB9-B9B1-E1D76A7614A4}"
+              DTS:DTSID="{5609DFCB-DBF1-41EF-A7E6-1C6EDA6B5C4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2018)"
-              DTS:DTSID="{B02A97AC-9A87-4FA9-A6FA-D9A7D3EC7A0A}"
+              DTS:DTSID="{900363E5-7975-4346-A9BF-E98205002F78}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2019)"
-              DTS:DTSID="{79D18265-8399-4274-996C-DBE478DDB7D6}"
+              DTS:DTSID="{83F76B78-DBB2-4DCC-9E4F-9BF9510EC928}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2020)"
-              DTS:DTSID="{7BC1C12A-1130-4A47-A2B2-1B40CCE50F65}"
+              DTS:DTSID="{054BDCD6-334D-4AD3-84B9-514D36BFC600}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="255"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Call Charges (2021)"
-              DTS:DTSID="{CE4B3225-E9C4-4828-9185-65E102A5C11B}"
+              DTS:DTSID="{F85070AF-3218-4085-BBF3-A5DC49EB7BD1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{F9EC4AC1-6A96-45FA-BB7B-DFC5E915E5DC}"
-      DTS:ObjectName="localhost.A_23_ETL_GroupProject_STA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=A_23_ETL_GroupProject_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{F9EC4AC1-6A96-45FA-BB7B-DFC5E915E5DC}localhost.A_23_ETL_GroupProject_STA;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -115,7 +103,7 @@
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
-              localeId="1033"
+              localeId="1036"
               name="FF_SRC - Call Charges"
               usesDispositions="true"
               version="1">
@@ -258,31 +246,31 @@
                       refId="Package\DFT_STA Call Charges\FF_SRC - Call Charges.Outputs[Flat File Source Output].ExternalColumns[Call Type ]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Call Type " />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Call Charges\FF_SRC - Call Charges.Outputs[Flat File Source Output].ExternalColumns[Call Charges (2018)]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Call Charges (2018)" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Call Charges\FF_SRC - Call Charges.Outputs[Flat File Source Output].ExternalColumns[Call Charges (2019)]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Call Charges (2019)" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Call Charges\FF_SRC - Call Charges.Outputs[Flat File Source Output].ExternalColumns[Call Charges (2020)]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Call Charges (2020)" />
                     <externalMetadataColumn
                       refId="Package\DFT_STA Call Charges\FF_SRC - Call Charges.Outputs[Flat File Source Output].ExternalColumns[Call Charges (2021)]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Call Charges (2021)" />
                   </externalMetadataColumns>
                 </output>
@@ -331,7 +319,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[OLE_DST - Call Charges]</property>
+                  name="OpenRowset">[OLE_DST - Call Charges]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -374,8 +362,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_STA Call Charges\OLE_DST - Call Charges.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
-                  connectionManagerRefId="Package.ConnectionManagers[localhost.A_23_ETL_GroupProject_STA]"
+                  connectionManagerID="{D17E3191-7085-4938-9D33-A7DFF3523E10}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Localhost.A_23_ETL_GroupProjet_STA]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -513,7 +501,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="194,42"
+          Size="193.6,41.6"
           Id="Package\DFT_STA Call Charges"
           TopLeft="151,157" />
       </GraphLayout>
@@ -523,15 +511,15 @@
     design-time-name="Package\DFT_STA Call Charges">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="195,42"
-          Id="Package\DFT_STA Call Charges\FF_SRC - Call Charges"
-          TopLeft="154.5,84.5" />
-        <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\DFT_STA Call Charges\OLE_DST - Call Charges"
           TopLeft="159,192" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\DFT_STA Call Charges\FF_SRC - Call Charges"
+          TopLeft="154.5,84.5" />
         <EdgeLayout
           Id="Package\DFT_STA Call Charges.Paths[Flat File Source Output]"
           TopLeft="252,126.5">
@@ -563,7 +551,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
