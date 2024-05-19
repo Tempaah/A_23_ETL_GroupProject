@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="DWH_DimEmployee"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{CDC8BF00-986B-45B3-9207-D5491AD8E0EC}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{8ED052F0-72F9-451A-A69C-9359E4CB332C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1291,13 +1291,25 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="211.2,41.6"
-          Id="Package\DFT DimEmployee SCD1\OLE_SRC - ODS -Employee"
-          TopLeft="145.833325365352,28.5999998011192" />
+          Size="193.6,41.6"
+          Id="Package\DFT DimEmployee SCD1\CMD - Update Employee"
+          TopLeft="757.499958612026,155.933332326876" />
         <NodeLayout
           Size="212,41.6"
           Id="Package\DFT DimEmployee SCD1\LKP - EmployeeID"
           TopLeft="144.166658789747,160.333332218395" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\DFT DimEmployee SCD1\OLE_DST - DWH Employee"
+          TopLeft="148.333325228758,295.533331278231" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\DFT DimEmployee SCD1\LKP - AnyChanges?"
+          TopLeft="501.666639256809,158.533332308796" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\DFT DimEmployee SCD1\OLE_SRC - ODS -Employee"
+          TopLeft="145.833325365352,28.5999998011192" />
         <EdgeLayout
           Id="Package\DFT DimEmployee SCD1.Paths[OLE DB Source Output]"
           TopLeft="250.79999207755,70.1999998011192">
@@ -1320,66 +1332,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\DFT DimEmployee SCD1\OLE_DST - DWH Employee"
-          TopLeft="146.666658653154,268.666664798392" />
-        <EdgeLayout
-          Id="Package\DFT DimEmployee SCD1.Paths[Lookup No Match Output]"
-          TopLeft="250.616658721451,201.933332218395">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.7333325799969"
-              Start="0,0"
-              End="0,59.2333325799969">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.2333325799969" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,23.8119787899984,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\DFT DimEmployee SCD1\LKP - AnyChanges?"
-          TopLeft="501.666639256809,158.533332308796" />
-        <EdgeLayout
-          Id="Package\DFT DimEmployee SCD1.Paths[Lookup Match Output]"
-          TopLeft="356.166658789747,180.233332263596">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="145.499980467062,0"
-              Start="0,0"
-              End="137.999980467062,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="137.999980467062,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="20.8086035147809,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="193.6,41.6"
-          Id="Package\DFT DimEmployee SCD1\CMD - Update Employee"
-          TopLeft="757.499958612026,155.933332326876" />
         <EdgeLayout
           Id="Package\DFT DimEmployee SCD1.Paths[Lookup No Match Output1]"
           TopLeft="673.666639256809,178.033332317836">
@@ -1401,6 +1353,54 @@ where [refTable].[EmployeeID] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-17.6397270411414,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT DimEmployee SCD1.Paths[Lookup No Match Output]"
+          TopLeft="251.449992009253,201.933332218395">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93.5999990598362"
+              Start="0,0"
+              End="0,86.0999990598362">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.0999990598362" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,37.2453120299181,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT DimEmployee SCD1.Paths[Lookup Match Output]"
+          TopLeft="356.166658789747,180.233332263596">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.499980467062,0"
+              Start="0,0"
+              End="137.999980467062,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="137.999980467062,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="20.8086035147809,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
