@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_CallData"
   DTS:PackageType="5"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{14A02C40-D27D-49D1-97CA-7E98AD74BFD7}">
+  DTS:VersionBuild="44"
+  DTS:VersionGUID="{00A25997-43D4-42B8-ACC1-3F2B7BA8B9A6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2783,7 +2783,7 @@ where [refTable].[CallTypeID] = ?</property>
         <NodeLayout
           Size="196,41.6"
           Id="Package\DFT_ODS -FACTCallData\OLE_SRC -STA CallData"
-          TopLeft="430.766643218035,44.1999996926387" />
+          TopLeft="443.266642535065,44.1999996926387" />
         <NodeLayout
           Size="190.4,41.6"
           Id="Package\DFT_ODS -FACTCallData\DCNV - Waitime Int"
@@ -2811,11 +2811,11 @@ where [refTable].[CallTypeID] = ?</property>
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\DFT_ODS -FACTCallData\OLE_DST ODS FactCallData"
-          TopLeft="456.666641715501,828.799998119672" />
+          TopLeft="439.999975959461,785.466665087673" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\DFT_ODS -FACTCallData\DER CallTimestamp Year and ID"
-          TopLeft="450.766642125283,572.533332055675" />
+          TopLeft="435.951828119914,579.274072749541" />
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\DFT_ODS -FACTCallData\DCNV - Callduration - Int"
@@ -3018,30 +3018,18 @@ where [refTable].[CallTypeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_ODS -FACTCallData.Paths[OLE DB Source Output]"
-          TopLeft="528.766643218035,85.7999996926387">
+          TopLeft="540.199976232649,85.7999996926387">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.366666712198,58.0666659735975"
+              EndConnector="0,58.0666659735973"
               Start="0,0"
-              End="10.366666712198,50.5666659735975">
+              End="0,50.5666659735973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.0333329867987" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.0333329867987"
-                    Point2="0,29.0333329867987"
-                    Point3="4,29.0333329867987" />
-                  <mssgle:LineSegment
-                    End="6.36666671219803,29.0333329867987" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.36666671219803,29.0333329867987"
-                    Point2="10.366666712198,29.0333329867987"
-                    Point3="10.366666712198,33.0333329867987" />
-                  <mssgle:LineSegment
-                    End="10.366666712198,50.5666659735975" />
+                    End="0,50.5666659735973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3052,37 +3040,25 @@ where [refTable].[CallTypeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_ODS -FACTCallData.Paths[Lookup Match Output]"
-          TopLeft="550.866641442313,714.666663098866">
+          TopLeft="549.033308700887,714.666663098866">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13.0000002731879,114.133335020806"
+              EndConnector="0,70.8000019888071"
               Start="0,0"
-              End="13.0000002731879,106.633335020806">
+              End="0,63.3000019888071">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.0666675104032" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,53.0666675104032"
-                    Point2="0,57.0666675104032"
-                    Point3="4,57.0666675104032" />
-                  <mssgle:LineSegment
-                    End="9.00000027318788,57.0666675104032" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.00000027318788,57.0666675104032"
-                    Point2="13.0000002731879,57.0666675104032"
-                    Point3="13.0000002731879,61.0666675104032" />
-                  <mssgle:LineSegment
-                    End="13.0000002731879,106.633335020806" />
+                    End="0,63.3000019888071" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-41.6913865821561,62.0666675104032,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,25.8453134944036,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3160,26 +3136,26 @@ where [refTable].[CallTypeID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27.6999867503851,30.0666666967996"
+              EndConnector="12.8851727450159,36.8074073906665"
               Start="0,0"
-              End="27.6999867503851,22.5666666967996">
+              End="12.8851727450159,29.3074073906665">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.0333333483998" />
+                    End="0,14.4037036953333" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.0333333483998"
-                    Point2="0,15.0333333483998"
-                    Point3="4,15.0333333483998" />
+                    Point1="0,14.4037036953333"
+                    Point2="0,18.4037036953333"
+                    Point3="4,18.4037036953333" />
                   <mssgle:LineSegment
-                    End="23.6999867503851,15.0333333483998" />
+                    End="8.88517274501589,18.4037036953333" />
                   <mssgle:CubicBezierSegment
-                    Point1="23.6999867503851,15.0333333483998"
-                    Point2="27.6999867503851,15.0333333483998"
-                    Point3="27.6999867503851,19.0333333483998" />
+                    Point1="8.88517274501589,18.4037036953333"
+                    Point2="12.8851727450159,18.4037036953333"
+                    Point3="12.8851727450159,22.4037036953333" />
                   <mssgle:LineSegment
-                    End="27.6999867503851,22.5666666967996" />
+                    End="12.8851727450159,29.3074073906665" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3212,30 +3188,18 @@ where [refTable].[CallTypeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_ODS -FACTCallData.Paths[Derived Column Output1]"
-          TopLeft="565.966642125283,614.133332055675">
+          TopLeft="551.009234781113,620.874072749541">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.1000006829697,58.9333310431909"
+              EndConnector="0,52.1925903493245"
               Start="0,0"
-              End="-15.1000006829697,51.4333310431909">
+              End="0,44.6925903493245">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.4666655215955" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.4666655215955"
-                    Point2="0,29.4666655215955"
-                    Point3="-4,29.4666655215955" />
-                  <mssgle:LineSegment
-                    End="-11.1000006829697,29.4666655215955" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-11.1000006829697,29.4666655215955"
-                    Point2="-15.1000006829697,29.4666655215955"
-                    Point3="-15.1000006829697,33.4666655215955" />
-                  <mssgle:LineSegment
-                    End="-15.1000006829697,51.4333310431909" />
+                    End="0,44.6925903493245" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3301,10 +3265,10 @@ where [refTable].[CallTypeID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="Getting the source STA Call Data"
+          Text="Getting the source from STA Call Data"
           ParentId="Package\DFT_ODS -FACTCallData"
           FontInfo="{assembly:Null}"
-          Size="200,40"
+          Size="228.8,40"
           Id="a5bfb8d3-e65e-48a2-8b83-9c996897028d"
           TopLeft="211.599988526106,44.1999996926387" />
         <AnnotationLayout
@@ -3343,12 +3307,12 @@ where [refTable].[CallTypeID] = ?</property>
           Id="76852829-a845-4334-adb0-a30a688ee6ec"
           TopLeft="48.1999975413085,667.866663930548" />
         <AnnotationLayout
-          Text="Feeding the ODS DimCall with all those transformation&#xA;"
+          Text="Feeding the ODS FactCall with all those transformation&#xA;"
           ParentId="Package\DFT_ODS -FACTCallData"
           FontInfo="{assembly:Null}"
-          Size="318.4,56"
+          Size="317.6,56"
           Id="f850072e-1b8d-4804-9efd-4bf645e48cb2"
-          TopLeft="78.3333323316443,834.066663225426" />
+          TopLeft="81.9047607079386,779.590473128056" />
         <AnnotationLayout
           Text="Adding the SLA statut"
           ParentId="Package\DFT_ODS -FACTCallData"

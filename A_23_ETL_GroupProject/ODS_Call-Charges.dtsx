@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="134"
-  DTS:VersionGUID="{2EDF25F8-C36A-492D-9450-076681A19B9D}">
+  DTS:VersionBuild="137"
+  DTS:VersionGUID="{29A46464-E907-4343-9FF8-F3D7D5CEACC1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1013,11 +1013,11 @@
         <NodeLayout
           Size="241.6,41.6"
           Id="Package\DFT -ODS - Call Charges\DCNV - YeartoNum"
-          TopLeft="233.333320584563,469.266664093269" />
+          TopLeft="234.999987160167,477.933330699669" />
         <NodeLayout
           Size="201.6,41.6"
           Id="Package\DFT -ODS - Call Charges\UPVT -Call Charges Table"
-          TopLeft="246.000001500049,159.066664551233" />
+          TopLeft="246.000001500049,139.133331356514" />
         <NodeLayout
           Size="239.2,41.6"
           Id="Package\DFT -ODS - Call Charges\OLE_DST - ODS -DimCallCharges"
@@ -1032,18 +1032,18 @@
           TopLeft="231.266656740838,390.466664852632" />
         <EdgeLayout
           Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output]"
-          TopLeft="351.6999886627,432.066664852632">
+          TopLeft="352.533321950503,432.066664852632">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.1999992406368"
+              EndConnector="0,45.8666658470367"
               Start="0,0"
-              End="0,29.6999992406368">
+              End="0,38.3666658470367">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.6999992406368" />
+                    End="0,38.3666658470367" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1054,18 +1054,40 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT -ODS - Call Charges.Paths[Unpivot Output]"
-          TopLeft="347.433335403766,200.666664551233">
+          TopLeft="347.433335403766,180.733331356514">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.8666654961631"
+              EndConnector="0,51.7999986908824"
               Start="0,0"
-              End="0,24.3666654961631">
+              End="0,44.2999986908824">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.3666654961631" />
+                    End="0,44.2999986908824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT -ODS - Call Charges.Paths[OLE DB Source Output]"
+          TopLeft="342.866668423347,43.5999996602536">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95.53333169626"
+              Start="0,0"
+              End="0,88.03333169626">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,88.03333169626" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1120,18 +1142,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output1]"
-          TopLeft="353.949987228464,510.866664093269">
+          TopLeft="354.783320516266,519.533330699669">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,70.9999997287985"
+              EndConnector="0,62.3333331223993"
               Start="0,0"
-              End="0,63.4999997287985">
+              End="0,54.8333331223993">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.4999997287985" />
+                    End="0,54.8333331223993" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1153,7 +1175,7 @@
           FontInfo="{assembly:Null}"
           Size="187.2,40"
           Id="caa4225e-fc83-4c2d-80eb-d46b48cf63ab"
-          TopLeft="518.499995750684,139.133331704603" />
+          TopLeft="518.499995750684,147.799998311003" />
         <AnnotationLayout
           Text="Extracting Amount of charges from Table CallCharges"
           ParentId="Package\DFT -ODS - Call Charges"
@@ -1181,7 +1203,7 @@
           FontInfo="{assembly:Null}"
           Size="218.4,40"
           Id="6493e6b5-e451-4d05-90ba-c880a556a47c"
-          TopLeft="517.499971725048,459.666665033432" />
+          TopLeft="519.166638300652,470.066664961112" />
         <AnnotationLayout
           Text="Loading all the transformation into the ODS DimCallCharges"
           ParentId="Package\DFT -ODS - Call Charges"
@@ -1189,28 +1211,6 @@
           Size="348,40"
           Id="badd819e-c145-4ca2-96ab-5c96d00cd825"
           TopLeft="514.999971861642,579.533331133591" />
-        <EdgeLayout
-          Id="Package\DFT -ODS - Call Charges.Paths[OLE DB Source Output]"
-          TopLeft="342.866668423347,43.5999996602536">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,115.466664890979"
-              Start="0,0"
-              End="0,107.966664890979">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,107.966664890979" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
