@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="ODS_Employee"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{C0501EAE-01AC-4DEB-8124-3742087140F7}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{A7823ABA-B9DD-4FD2-98A2-0F3423C0796D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -31,6 +31,52 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT_Dim_Employee\DCNV - Resizing"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="DCNV - Resizing"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Dim_Employee\DCNV - Resizing.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Dim_Employee\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Dim_Employee\DCNV - Resizing.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT_Dim_Employee\DCNV - StateID DataType"
               componentClassID="Microsoft.DataConvert"
@@ -1100,9 +1146,14 @@ where [refTable].[StateCD] = ?</property>
           <paths>
             <path
               refId="Package\DFT_Dim_Employee.Paths[Data Conversion Output]"
-              endId="Package\DFT_Dim_Employee\LKP - Employee StateNameandRegion.Inputs[Lookup Input]"
+              endId="Package\DFT_Dim_Employee\DCNV - Resizing.Inputs[Data Conversion Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Dim_Employee\DCNV - StateID DataType.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Dim_Employee.Paths[Data Conversion Output1]"
+              endId="Package\DFT_Dim_Employee\LKP - Employee StateNameandRegion.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Dim_Employee\DCNV - Resizing.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Dim_Employee.Paths[Derived Column Output]"
               endId="Package\DFT_Dim_Employee\DER-LastName.Inputs[Derived Column Input]"
@@ -1228,17 +1279,13 @@ where [refTable].[StateCD] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="205.6,95.2"
-          Id="Package\DFT_Dim_Employee\DER - Separating Site Column to have Site and StateID"
-          TopLeft="292.499984018506,329.066664400631" />
-        <NodeLayout
-          Size="206.4,41.6"
-          Id="Package\DFT_Dim_Employee\OLE_DST - ODS Employee"
-          TopLeft="305.833316623337,708.19999773999" />
-        <NodeLayout
           Size="202.4,41.6"
           Id="Package\DFT_Dim_Employee\OLE_SRC_STA-Employee"
           TopLeft="285.833317716089,23.3999998372793" />
+        <NodeLayout
+          Size="205.6,95.2"
+          Id="Package\DFT_Dim_Employee\DER - Separating Site Column to have Site and StateID"
+          TopLeft="292.499984018506,329.066664400631" />
         <NodeLayout
           Size="192.8,41.6"
           Id="Package\DFT_Dim_Employee\DER - EmailAdress"
@@ -1246,7 +1293,7 @@ where [refTable].[StateCD] = ?</property>
         <NodeLayout
           Size="199.2,41.6"
           Id="Package\DFT_Dim_Employee\DCNV - StateID DataType"
-          TopLeft="300.833316896525,477.466665449274" />
+          TopLeft="297.499983745317,455.799998933275" />
         <NodeLayout
           Size="196,41.6"
           Id="Package\DFT_Dim_Employee\DER-LastName"
@@ -1256,9 +1303,9 @@ where [refTable].[StateCD] = ?</property>
           Id="Package\DFT_Dim_Employee\DER - FirstName"
           TopLeft="290.833317442902,93.5999993491172" />
         <NodeLayout
-          Size="203.2,41.6"
-          Id="Package\DFT_Dim_Employee\LKP - Employee StateNameandRegion"
-          TopLeft="303.333316759931,610.799998445113" />
+          Size="184,41.6"
+          Id="Package\DFT_Dim_Employee\DCNV - Resizing"
+          TopLeft="308.333316486744,529.666664707992" />
         <EdgeLayout
           Id="Package\DFT_Dim_Employee.Paths[OLE DB Source Output]"
           TopLeft="387.933317579495,64.9999998372793">
@@ -1282,43 +1329,19 @@ where [refTable].[StateCD] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Dim_Employee.Paths[Lookup Match Output]"
-          TopLeft="406.983316691634,652.399998445113">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.7999992948774"
-              Start="0,0"
-              End="0,48.2999992948774">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.2999992948774" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.3453121474387,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DFT_Dim_Employee.Paths[Derived Column Output3]"
-          TopLeft="397.866650457515,424.266664400631">
+          TopLeft="396.199983881911,424.266664400631">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53.2000010486433"
+              EndConnector="0,31.5333345326439"
               Start="0,0"
-              End="0,45.7000010486433">
+              End="0,24.0333345326439">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.7000010486433" />
+                    End="0,24.0333345326439" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1393,6 +1416,28 @@ where [refTable].[StateCD] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Dim_Employee.Paths[Data Conversion Output]"
+          TopLeft="398.716650116031,497.399998933275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.266665774717"
+              Start="0,0"
+              End="0,24.766665774717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.766665774717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="Getting Source from STA Employee"
           ParentId="Package\DFT_Dim_Employee"
@@ -1429,12 +1474,19 @@ where [refTable].[StateCD] = ?</property>
           Id="c34591c4-bb83-4b40-a98f-5c461ff1327a"
           TopLeft="531.666637617682,346.666665485435" />
         <AnnotationLayout
-          Text="Resizing of EmployeeID and StateId and StateName"
+          Text="Converting StateID Datatype to STR type&#xA;"
           ParentId="Package\DFT_Dim_Employee"
           FontInfo="{assembly:Null}"
-          Size="300.8,40"
+          Size="244,56"
+          Id="6502c935-31ce-4e29-ae57-64a612c73296"
+          TopLeft="492.499973090988,454.666665196154" />
+        <AnnotationLayout
+          Text="Resizing of EmployeeID and StateId"
+          ParentId="Package\DFT_Dim_Employee"
+          FontInfo="{assembly:Null}"
+          Size="216,40"
           Id="115648d4-21cc-4d7b-9f8f-19fb4bb3a604"
-          TopLeft="513.333305286038,479.333332381116" />
+          TopLeft="510.833305422632,525.266665395035" />
         <AnnotationLayout
           Text="Loading all transformation into ODS DimEmployee"
           ParentId="Package\DFT_Dim_Employee"
@@ -1442,27 +1494,24 @@ where [refTable].[StateCD] = ?</property>
           Size="296,40"
           Id="dac84caf-1353-493f-9fac-951233b99267"
           TopLeft="534.99997076889,687.33333093471" />
-        <AnnotationLayout
-          Text="Getting StateName and the Regon of the Employee From the US STATE TABLE"
-          ParentId="Package\DFT_Dim_Employee"
-          FontInfo="{assembly:Null}"
-          Size="438.4,40"
-          Id="5ce24eea-7e6e-4514-83f3-2b3b240ae9e8"
-          TopLeft="518.33330501285,600.533332200315" />
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\DFT_Dim_Employee\LKP - Employee StateNameandRegion"
+          TopLeft="303.333316759931,610.799998445113" />
         <EdgeLayout
-          Id="Package\DFT_Dim_Employee.Paths[Data Conversion Output]"
-          TopLeft="402.683316828228,519.066665449274">
+          Id="Package\DFT_Dim_Employee.Paths[Data Conversion Output1]"
+          TopLeft="402.633316623338,571.266664707992">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,91.7333329958387"
+              EndConnector="0,39.5333337371214"
               Start="0,0"
-              End="0,84.2333329958387">
+              End="0,32.0333337371214">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,84.2333329958387" />
+                    End="0,32.0333337371214" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1471,6 +1520,41 @@ where [refTable].[StateCD] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\DFT_Dim_Employee\OLE_DST - ODS Employee"
+          TopLeft="308.333316486743,689.133331205911" />
+        <EdgeLayout
+          Id="Package\DFT_Dim_Employee.Paths[Lookup Match Output]"
+          TopLeft="408.233316623337,652.399998445114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.7333327607977"
+              Start="0,0"
+              End="0,29.2333327607977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2333327607977" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,8.81197888039884,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Getting StateName and the Regon of the Employee"
+          ParentId="Package\DFT_Dim_Employee"
+          FontInfo="{assembly:Null}"
+          Size="300,60"
+          Id="5ce24eea-7e6e-4514-83f3-2b3b240ae9e8"
+          TopLeft="535.833304056692,605.733332164155" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>

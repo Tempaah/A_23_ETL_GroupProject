@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{3D3B5D5F-96F8-4CED-8166-BC3EC3CE4EC4}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{2DD212F1-E466-4973-BF77-B76928AE86F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -807,14 +807,14 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
               startId="Package\DFT -CallTypes - SCD1\LKP - Call Types.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output]"
-              endId="Package\DFT -CallTypes - SCD1\OLE_DST - DWH CallCharges.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\DFT -CallTypes - SCD1\LKP - Call Types.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output1]"
               endId="Package\DFT -CallTypes - SCD1\CMD - Update Callcharges.Inputs[OLE DB Command Input]"
               name="Lookup No Match Output"
               startId="Package\DFT -CallTypes - SCD1\LKP Any Changes?.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output1]"
+              endId="Package\DFT -CallTypes - SCD1\OLE_DST - DWH CallCharges.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\DFT -CallTypes - SCD1\LKP - Call Types.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\DFT -CallTypes - SCD1.Paths[OLE DB Source Output]"
               endId="Package\DFT -CallTypes - SCD1\LKP - Call Types.Inputs[Lookup Input]"
@@ -828,7 +828,7 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
       DTS:refId="Package\SQL TRUNCATE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{cb9ee810-a82b-4c8b-9d52-843c18c8b406}"
+      DTS:DTSID="{6ba0b2c0-e71e-40e5-bdae-672241aff1ac}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL TRUNCATE"
@@ -838,7 +838,7 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5AFDA776-46AB-4F65-B8AA-9AB1805D6583}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCallCharges]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimEmployee]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -846,7 +846,7 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{67C498B4-7D57-41FC-90C2-3D058A18BAA5}"
+      DTS:DTSID="{53D583A0-5978-4B6C-A84A-029D2AAF6711}"
       DTS:From="Package\SQL TRUNCATE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -871,33 +871,33 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
         <NodeLayout
           Size="158.4,41.6"
           Id="Package\SQL TRUNCATE"
-          TopLeft="164.166657696996,9.73333397216268" />
+          TopLeft="181.666656740838,22.7333338817618" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="243.366657696996,51.3333339721627">
+          TopLeft="260.866656740838,64.3333338817618">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.4666657560402,69.9999985174338"
+              EndConnector="13.966666712198,56.9999986078342"
               Start="0,0"
-              End="31.4666657560402,62.4999985174338">
+              End="13.966666712198,49.4999986078342">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.9999992587169" />
+                    End="0,24.4999993039171" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.9999992587169"
-                    Point2="0,34.9999992587169"
-                    Point3="4,34.9999992587169" />
+                    Point1="0,24.4999993039171"
+                    Point2="0,28.4999993039171"
+                    Point3="4,28.4999993039171" />
                   <mssgle:LineSegment
-                    End="27.4666657560402,34.9999992587169" />
+                    End="9.96666671219799,28.4999993039171" />
                   <mssgle:CubicBezierSegment
-                    Point1="27.4666657560402,34.9999992587169"
-                    Point2="31.4666657560402,34.9999992587169"
-                    Point3="31.4666657560402,38.9999992587169" />
+                    Point1="9.96666671219799,28.4999993039171"
+                    Point2="13.966666712198,28.4999993039171"
+                    Point3="13.966666712198,32.4999993039171" />
                   <mssgle:LineSegment
-                    End="31.4666657560402,62.4999985174338" />
+                    End="13.966666712198,49.4999986078342" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -960,18 +960,42 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output1]"
-          TopLeft="715.466636798118,144.733332471516">
+          TopLeft="277.466657560402,174.199999077916">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="84.5333194918107,0"
+              EndConnector="0,76.266665847037"
               Start="0,0"
-              End="77.0333194918107,0">
+              End="0,68.766665847037">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.0333194918107,0" />
+                    End="0,68.766665847037" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,28.5786454235185,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output]"
+          TopLeft="715.466636798118,144.733332471517">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.5333194918109,0"
+              Start="0,0"
+              End="77.0333194918109,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.0333194918109,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -979,30 +1003,6 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-17.2897269728446,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT -CallTypes - SCD1.Paths[Lookup No Match Output]"
-          TopLeft="277.466657560402,174.199999077916">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76.2666658470366"
-              Start="0,0"
-              End="0,68.7666658470366">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.7666658470366" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,28.5786454235183,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1026,7 +1026,7 @@ where [refTable].[Year] = ? and [refTable].[Call Type] = ? and [refTable].[CallC
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="28.1252694757122,5,96.3827734375,11.609375"
+              BoundingBox="28.125269475712,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="137"
-  DTS:VersionGUID="{29A46464-E907-4343-9FF8-F3D7D5CEACC1}">
+  DTS:VersionBuild="139"
+  DTS:VersionGUID="{19DDCABF-D02C-4EDC-8552-B41CA6412659}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -45,6 +45,125 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT -ODS - Call Charges\CSPT Empty rows"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CSPT Empty rows"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input].Columns[Call Type ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call Type "
+                      lineageId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Type ]" />
+                    <inputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input].Columns[Call Charges (2018)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call Charges (2018)"
+                      lineageId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2018)]" />
+                    <inputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input].Columns[Call Charges (2019)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call Charges (2019)"
+                      lineageId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2019)]" />
+                    <inputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input].Columns[Call Charges (2020)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call Charges (2020)"
+                      lineageId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2020)]" />
+                    <inputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input].Columns[Call Charges (2021)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Call Charges (2021)"
+                      lineageId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2021)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[BlankRows]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="BlankRows"
+                  synchronousInputId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">([ISNULL](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Type ]}) || [TRIM](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Type ]}) == "") &amp;&amp; ([ISNULL](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2018)]}) || [TRIM](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2018)]}) == "") &amp;&amp; ([ISNULL](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2019)]}) || [TRIM](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2019)]}) == "") &amp;&amp; ([ISNULL](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2020)]}) || [TRIM](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2020)]}) == "") &amp;&amp; ([ISNULL](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2021)]}) || [TRIM](#{Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output].Columns[Call Charges (2021)]}) == "")</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(ISNULL([Call Type ]) || TRIM([Call Type ]) == "") &amp;&amp; (ISNULL([Call Charges (2018)]) || TRIM([Call Charges (2018)]) == "") &amp;&amp; (ISNULL([Call Charges (2019)]) || TRIM([Call Charges (2019)]) == "") &amp;&amp; (ISNULL([Call Charges (2020)]) || TRIM([Call Charges (2020)]) == "") &amp;&amp; (ISNULL([Call Charges (2021)]) || TRIM([Call Charges (2021)]) == "")</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Empty Rows]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Empty Rows"
+                  synchronousInputId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT -ODS - Call Charges\DCNV - ChargesAmount Num"
               componentClassID="Microsoft.DataConvert"
@@ -374,7 +493,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[DimCallCharges]</property>
+                  name="OpenRowset">[dbo].[DimCallCharges]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -899,8 +1018,13 @@
               name="Derived Column Output"
               startId="Package\DFT -ODS - Call Charges\DER -Year.Outputs[Derived Column Output]" />
             <path
-              refId="Package\DFT -ODS - Call Charges.Paths[OLE DB Source Output]"
+              refId="Package\DFT -ODS - Call Charges.Paths[Empty Rows]"
               endId="Package\DFT -ODS - Call Charges\UPVT -Call Charges Table.Inputs[Unpivot Input]"
+              name="Empty Rows"
+              startId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Outputs[Empty Rows]" />
+            <path
+              refId="Package\DFT -ODS - Call Charges.Paths[OLE DB Source Output]"
+              endId="Package\DFT -ODS - Call Charges\CSPT Empty rows.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
               startId="Package\DFT -ODS - Call Charges\OLE_SRC - STA Call Charges.Outputs[OLE DB Source Output]" />
             <path
@@ -1001,7 +1125,7 @@
     design-time-name="Package\DFT -ODS - Call Charges">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="232.8,41.6"
           Id="Package\DFT -ODS - Call Charges\DER-ChargesAmount"
@@ -1013,11 +1137,11 @@
         <NodeLayout
           Size="241.6,41.6"
           Id="Package\DFT -ODS - Call Charges\DCNV - YeartoNum"
-          TopLeft="234.999987160167,477.933330699669" />
+          TopLeft="233.333320584563,469.266664093269" />
         <NodeLayout
           Size="201.6,41.6"
           Id="Package\DFT -ODS - Call Charges\UPVT -Call Charges Table"
-          TopLeft="246.000001500049,139.133331356514" />
+          TopLeft="246.000001500049,159.066664551233" />
         <NodeLayout
           Size="239.2,41.6"
           Id="Package\DFT -ODS - Call Charges\OLE_DST - ODS -DimCallCharges"
@@ -1027,23 +1151,51 @@
           Id="Package\DFT -ODS - Call Charges\DER -Year"
           TopLeft="232.33332632151,307.999998553594" />
         <NodeLayout
+          Size="204,41.6"
+          Id="Package\DFT -ODS - Call Charges\CSPT Empty rows"
+          TopLeft="238.333320311375,78.8666661182377" />
+        <NodeLayout
           Size="236,41.6"
           Id="Package\DFT -ODS - Call Charges\DCNV - ChargesAmount Num"
           TopLeft="231.266656740838,390.466664852632" />
         <EdgeLayout
-          Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output]"
-          TopLeft="352.533321950503,432.066664852632">
+          Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output1]"
+          TopLeft="353.949987228464,510.866664093269">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.8666658470367"
+              EndConnector="0,70.9999997287985"
               Start="0,0"
-              End="0,38.3666658470367">
+              End="0,63.4999997287985">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.3666658470367" />
+                    End="0,63.4999997287985" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,23.7499998643992,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output]"
+          TopLeft="351.6999886627,432.066664852632">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.1999992406368"
+              Start="0,0"
+              End="0,29.6999992406368">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6999992406368" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1054,18 +1206,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT -ODS - Call Charges.Paths[Unpivot Output]"
-          TopLeft="347.433335403766,180.733331356514">
+          TopLeft="347.433335403766,200.666664551233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.7999986908824"
+              EndConnector="0,31.8666654961631"
               Start="0,0"
-              End="0,44.2999986908824">
+              End="0,24.3666654961631">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.2999986908824" />
+                    End="0,24.3666654961631" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1076,24 +1228,48 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT -ODS - Call Charges.Paths[OLE DB Source Output]"
-          TopLeft="342.866668423347,43.5999996602536">
+          TopLeft="339.63332782901,43.5999996602536">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.53333169626"
+              EndConnector="0,35.2666664579842"
               Start="0,0"
-              End="0,88.03333169626">
+              End="0,27.7666664579842">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.03333169626" />
+                    End="0,27.7666664579842" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT -ODS - Call Charges.Paths[Empty Rows]"
+          TopLeft="343.566660905712,120.466666118238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5999984329952"
+              Start="0,0"
+              End="0,31.0999984329952">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.0999984329952" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-27.792578125,9.90888593524762,55.58515625,11.2822265625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1140,28 +1316,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT -ODS - Call Charges.Paths[Data Conversion Output1]"
-          TopLeft="354.783320516266,519.533330699669">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,62.3333331223993"
-              Start="0,0"
-              End="0,54.8333331223993">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.8333331223993" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <AnnotationLayout
           Text="Getting sources from STA Call Charges&#xA;"
           ParentId="Package\DFT -ODS - Call Charges"
@@ -1175,7 +1329,7 @@
           FontInfo="{assembly:Null}"
           Size="187.2,40"
           Id="caa4225e-fc83-4c2d-80eb-d46b48cf63ab"
-          TopLeft="518.499995750684,147.799998311003" />
+          TopLeft="518.499995750684,139.133331704603" />
         <AnnotationLayout
           Text="Extracting Amount of charges from Table CallCharges"
           ParentId="Package\DFT -ODS - Call Charges"
@@ -1203,7 +1357,7 @@
           FontInfo="{assembly:Null}"
           Size="218.4,40"
           Id="6493e6b5-e451-4d05-90ba-c880a556a47c"
-          TopLeft="519.166638300652,470.066664961112" />
+          TopLeft="517.499971725048,459.666665033432" />
         <AnnotationLayout
           Text="Loading all the transformation into the ODS DimCallCharges"
           ParentId="Package\DFT -ODS - Call Charges"

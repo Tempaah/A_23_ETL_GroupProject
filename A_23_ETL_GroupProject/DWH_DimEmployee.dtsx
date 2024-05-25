@@ -11,8 +11,8 @@
   DTS:LocaleID="1036"
   DTS:ObjectName="DWH_DimEmployee"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{8ED052F0-72F9-451A-A69C-9359E4CB332C}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{EB186936-76F3-4FFF-BF3F-8F44A44F40E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1204,7 +1204,7 @@ where [refTable].[EmployeeID] = ?</property>
       DTS:refId="Package\SQL TRUNCATE"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{86457279-1e9e-44c2-9e16-0b5914600960}"
+      DTS:DTSID="{e9c02898-60b2-40df-8ce2-b4deeb459522}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SQL TRUNCATE"
@@ -1214,7 +1214,7 @@ where [refTable].[EmployeeID] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5AFDA776-46AB-4F65-B8AA-9AB1805D6583}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimEmployee]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCallCharges]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1222,7 +1222,7 @@ where [refTable].[EmployeeID] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{752E017B-8134-4437-BFDD-413CA1A005E7}"
+      DTS:DTSID="{EC63BEFA-6233-4907-BC77-6FF5894303E7}"
       DTS:From="Package\SQL TRUNCATE"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1247,33 +1247,21 @@ where [refTable].[EmployeeID] = ?</property>
         <NodeLayout
           Size="158.4,41.6"
           Id="Package\SQL TRUNCATE"
-          TopLeft="179.999990165234,25.3333338636822" />
+          TopLeft="204.999988799294,38.333333773282" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="259.199990165234,66.9333338636822">
+          TopLeft="284.216655989571,79.933333773282">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25.033333014614,79.5333317844736"
+              EndConnector="0,66.533331874874"
               Start="0,0"
-              End="25.033333014614,72.0333317844736">
+              End="0,59.033331874874">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.7666658922368" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.7666658922368"
-                    Point2="0,39.7666658922368"
-                    Point3="4,39.7666658922368" />
-                  <mssgle:LineSegment
-                    End="21.033333014614,39.7666658922368" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.033333014614,39.7666658922368"
-                    Point2="25.033333014614,39.7666658922368"
-                    Point3="25.033333014614,43.7666658922368" />
-                  <mssgle:LineSegment
-                    End="25.033333014614,72.0333317844736" />
+                    End="0,59.033331874874" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1301,7 +1289,7 @@ where [refTable].[EmployeeID] = ?</property>
         <NodeLayout
           Size="208.8,41.6"
           Id="Package\DFT DimEmployee SCD1\OLE_DST - DWH Employee"
-          TopLeft="148.333325228758,295.533331278231" />
+          TopLeft="146.666658653154,268.666664798392" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\DFT DimEmployee SCD1\LKP - AnyChanges?"
@@ -1358,25 +1346,25 @@ where [refTable].[EmployeeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT DimEmployee SCD1.Paths[Lookup No Match Output]"
-          TopLeft="251.449992009253,201.933332218395">
+          TopLeft="250.616658721451,201.933332218395">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,93.5999990598362"
+              EndConnector="0,66.7333325799969"
               Start="0,0"
-              End="0,86.0999990598362">
+              End="0,59.2333325799969">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.0999990598362" />
+                    End="0,59.2333325799969" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,37.2453120299181,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,23.8119787899984,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
